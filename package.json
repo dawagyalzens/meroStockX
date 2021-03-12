@@ -1,0 +1,19 @@
+{
+  "name": "merostockx",
+  "version": "1.0.0",
+  "description": "Ecommerce site mainly focused on delivery quality sneakers made using MERN Stack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawagyalzens/meroStockX.git"
+  },
+  "author": "Dawa Gyalzen Sherpa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawagyalzens/meroStockX/issues"
+  },
+  "homepage": "https://github.com/dawagyalzens/meroStockX#readme"
+}
