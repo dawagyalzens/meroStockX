@@ -11,15 +11,13 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please enter product price'],
         maxLength: [5, 'Product price cannot exceed 5 characters'],
-        default: 0.0
     },
     description: {
         type: String,
         required: [true, 'Please enter product description']
     },
     ratings: {
-        type: Number,
-        default: 0
+        type: Number
     },
     images: [
         {
@@ -41,11 +39,10 @@ const productSchema = new mongoose.Schema({
                 'Electronics',
                 'Camera',
                 'Laptop',
-                'Accessories',
+                'Sneakers',
                 'Headphones',
                 'Food',
                 'Books',
-                'Clothes/Shoes'
             ],
             message: 'Please select proper category for product '
         }
@@ -58,7 +55,6 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please enter product stock'],
         maxLength: [5, 'Product Stock Name cannot exceed 5 characters'],
-        default: 0
     },
     numOfReviews: {
         type: Number,
@@ -72,7 +68,8 @@ const productSchema = new mongoose.Schema({
             },
             rating: {
                 type: Number,
-                required: true
+                required: true,
+                default: 0
             },
             comment: {
                 type: String,

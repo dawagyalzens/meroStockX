@@ -1,5 +1,22 @@
 [
     {
-        
+        "name" : "Nike Dunk High Syracuse",
+        "price" : 110,
+        "description" : "Nike continues to revive their famed Be True To Your School pack with the retro release of the Nike Dunk High Syracuse.",
+        "rating" : 9,
+        "images" : [{
+            "public_id" : "tzfsnrli3szrdnbjgge",
+            "url" : "https://images.stockx.com/images/Nike-Dunk-High-Syracuse-2021.png?fit=clip&bg=FFFFFF&h=500&auto=compress&q=90&dpr=2&trim=color&updated_at=1610190459&fm=webp&ixlib=react-9.0.3&w=1246"
+        }],
+        "category": "Sneakers",
+        "seller" : "Nike",
+        "stock" : 7,
+        "numOfReviews" : 11,
+        "reviews" : [{
+            "name" : "Dawa Gyalzen Sherpa",
+            "rating" : 9,
+            "comment" : "I love these sneakers."
+        }],
+        "createdAt" : "Jul 12 2011"
     }
 ]
