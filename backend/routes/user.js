@@ -10,12 +10,16 @@ const { registerUser,
         updateProfile,
         logout,
         allUsers,
-        getUserDetails
-        } = require('../controllers/userController');
+        getUserDetails,
+        updateUser,
+        deleteUser
+
+} = require('../controllers/userController');
 
 const { isAuthenticatedUser,
-        authorizeRoles 
-        } = require('../middlewares/auth');
+        authorizeRoles
+
+} = require('../middlewares/auth');
 
 router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
@@ -30,6 +34,9 @@ router.route('/me/update').put(isAuthenticatedUser, updateProfile);
 router.route('/logout').get(logout);
 
 router.route('/admin/users').get(isAuthenticatedUser, authorizeRoles('admin'), allUsers);
-router.route('/admin/user/:id').get(isAuthenticatedUser, authorizeRoles('admin'), getUserDetails);
+router.route('/admin/user/:id')
+                .get(isAuthenticatedUser, authorizeRoles('admin'), getUserDetails)
+                .put(isAuthenticatedUser, authorizeRoles('admin'), updateUser)
+                .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteUser)
 
 module.exports = router;
