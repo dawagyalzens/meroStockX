@@ -9,6 +9,9 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 
     req.body.user = req.user.id;
 
+    // To check if user id is available or not...
+    console.log(req.user.id);
+
     const product = await Product.create(req.body)
 
     res.status(201).json({
