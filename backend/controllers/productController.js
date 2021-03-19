@@ -9,9 +9,6 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 
     req.body.user = req.user.id;
 
-    // To check if user id is available or not...
-    console.log(req.user.id);
-
     const product = await Product.create(req.body)
 
     res.status(201).json({
@@ -24,7 +21,7 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
     const resPerPage = 4;
-    const productCount = await Product.countDocuments();
+    const productsCount = await Product.countDocuments();
 
     const apiFeatures = new APIFeatures(Product.find(), req.query)
                         .search()
@@ -35,8 +32,7 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
     res.status(200).json({
         success: true,
-        count: products.length,
-        productCount,
+        productsCount,
         products
     })
 })
