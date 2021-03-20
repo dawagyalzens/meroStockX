@@ -1,5 +1,4 @@
 import React, { Fragment,useState, useEffect } from 'react'
-
 import ReactPaginate from 'react-paginate';
 
 import Metadata from './layouts/MetaData'
@@ -11,7 +10,7 @@ import { useAlert } from 'react-alert'
 import { getProducts } from '../actions/productActions'
 
 
-const Home = () => {
+const Home = ({ match }) => {
 
     const [currentPage, setCurrentPage] = useState(1)
 
@@ -19,6 +18,8 @@ const Home = () => {
     const dispatch = useDispatch();
 
     const { loading, products, error, productsCount, resPerPage } = useSelector(state => state.products)
+
+    const keyword = match.params.keyword
     
     useEffect(() => {
         
@@ -27,9 +28,9 @@ const Home = () => {
             alert.error(error);
         }
 
-        dispatch(getProducts(currentPage));
+        dispatch(getProducts(keyword, currentPage));
 
-    }, [dispatch, alert, error, currentPage])
+    }, [dispatch, alert, error,keyword, currentPage])
 
     function setCurrentPageNo(pageNumber) {
         setCurrentPage(pageNumber);
