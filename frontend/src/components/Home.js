@@ -7,11 +7,11 @@ import { getProducts } from '../actions/productActions'
 
 const Home = () => {
 
-    const dispatch = useDispatch();
+    const disptach = useDispatch();
     
     useEffect(() => {
-        dispatch(getProducts());
-    }, [dispatch])
+        disptach(getProducts());
+    }, [disptach])
 
     return (
         <Fragment>
@@ -24,11 +24,11 @@ const Home = () => {
                         <div className="card p-3 rounded">
                         <img
                             className="card-img-top mx-auto"
-                            src="https://m.media-amazon.com/images/I/617NtexaW2L._AC_UY218_.jpg"
+                            src="https://images.stockx.com/images/Nike-Dunk-High-Syracuse-2021.png?fit=clip&bg=FFFFFF&h=500&auto=compress&q=90&dpr=2&trim=color&updated_at=1610190459&fm=webp&ixlib=react-9.0.3&w=1246"
                         />
                         <div className="card-body d-flex flex-column">
                         <h5 className="card-title">
-                            <a href="">128GB Solid Storage Memory card - SanDisk Ultra</a>
+                            <a href="">Nike Dunk High Syracuse</a>
                         </h5>
                         <div className="ratings mt-auto">
                         <div className="rating-outer">
@@ -36,7 +36,7 @@ const Home = () => {
                         </div>
                         <span id="no_of_reviews">(5 Reviews)</span>
                         </div>
-                        <p className="card-text">$45.67</p>
+                        <p className="card-text">$145.67</p>
                             <a href="#" id="view_btn" className="btn btn-block">View Details</a>
                         </div>
                         </div>

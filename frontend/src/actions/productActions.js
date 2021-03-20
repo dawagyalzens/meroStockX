@@ -8,20 +8,20 @@ import {
 
 } from '../constants/productConstants'
 
-export const getProducts = () => async (dispatch) => {
+export const getProducts = () => async (disptach) => {
     try {
 
-        dispatch({ type: ALL_PRODUCTS_REQUEST })
+        disptach({ type: ALL_PRODUCTS_REQUEST })
 
         const { data } = await axios.get('/api/v1/products');
 
-        dispatch({
+        disptach({
             type: ALL_PRODUCTS_SUCCESS,
             payload: data
         })
 
     } catch (error) {
-        dispatch({
+        disptach({
             type: ALL_PRODUCTS_FAIL,
             payload: error.response.data.message
         })
@@ -29,8 +29,8 @@ export const getProducts = () => async (dispatch) => {
 }
 
 // Clear Errors
-export const clearErrors = () => async (dispatch) => {
-    dispatch({
+export const clearErrors = () => async (disptach) => {
+    disptach({
         type: CLEAR_ERRORS
     })
 }
