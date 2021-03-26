@@ -28,6 +28,7 @@ const Login = ({ history, location }) => {
 
         if(error) {
             alert.error(error);
+            history.push('/login');
             dispatch(clearErrors());
         }
 
