@@ -1,4 +1,4 @@
-import React, { Fragment,useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import ReactPaginate from 'react-paginate';
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css';
@@ -37,16 +37,16 @@ const Home = ({ match }) => {
 
     const { loading, products, error, productsCount, resPerPage, filteredProductsCount } = useSelector(state => state.products)
 
-    const keyword = match.params.keyword
+    const keyword = match.params.keyword;
     
     useEffect(() => {   
         if(error) {
-            alert.error(error);
+            return alert.error(error);
         }
 
         dispatch(getProducts(keyword, currentPage, price, category, rating));
 
-    }, [dispatch, alert, error,keyword, currentPage, price, category, rating])
+    }, [dispatch, alert, error,  keyword, currentPage, price, category, rating])
 
     function setCurrentPageNo(pageNumber) {
         setCurrentPage(pageNumber);
@@ -132,7 +132,6 @@ const Home = ({ match }) => {
                                                                         width: `${star * 20}%`
                                                                     }}
                                                                 >
-
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -143,11 +142,11 @@ const Home = ({ match }) => {
                                     </div>
 
                                     <div className="col-6 col-md-9">
-                                        <div className="row">
+                                        
                                         {products && products.map(product => (
                                         <Product key={product._id} product={product} col={4}/>
                                         ))}
-                                        </div>
+                                       
                                     </div>
                                 </Fragment>
                             ) : (

@@ -27,8 +27,8 @@ const Header = () => {
             <nav className="navbar row">
                 <div className="col-12 col-md-3">
                     <div className="navbar-brand">
-                        <Link to="/" onClick={logoutHandler}>
-                            <img src="/images/logo.png" alt="Logo of StockX" />
+                        <Link to="/">
+                            <img src="/images/logo.png" alt="Logo of StockX" onClick={logoutHandler}/>
                         </Link>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const Header = () => {
                                 <span>{user && user.name}</span>
                             </Link>
 
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div className="dropdownmenu" aria-labelledby="dropdownMenuButton" >
 
                                 {user && user.role === 'admin' && (
                                     <Link className="dropdown-item" to="/dashboard">Dashboard</Link>            
