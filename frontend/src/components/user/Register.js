@@ -48,7 +48,7 @@ const Register = ({ history }) => {
 
         dispatch(register(formData))
         alert.success('Registered Successfully.')
-        history.push('/')
+        history.push('/login')
     }
 
     const onChange = e => {

@@ -546,7 +546,13 @@ a[data-toggle='collapse'] {
   right: 20px;
   transform: translateY(-50%);
 }
+/* .dropdownmenu {
+  visibility: hidden;
+}
 
+.dropdownmenu:hover {
+  visibility: visible;
+} */
 ul ul a {
   font-size: 1rem !important;
   padding-left: 30px !important;

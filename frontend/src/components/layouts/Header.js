@@ -70,11 +70,11 @@ const Header = () => {
                                 <Link className="dropdown-item text-danger" to="/" onClick={logoutHandler}>
                                     Logout
                                 </Link>
-
                             </div>
-
                         </div>
-                    ) : !loading && <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>}
+                    ) : 
+                    //!loading && 
+                    <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>}
                 </div>
             </nav>
         </Fragment>

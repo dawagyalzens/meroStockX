@@ -32,7 +32,8 @@ import {
 
 } from '../constants/productConstants'
 
-export const getProducts = (keyword = '', currentPage = 1, price, category, rating = 0) => async (dispatch) => {
+// Retrieve all products
+export const getProducts = (keyword = '', currentPage = 1, price=0, category='Sneakers', rating = 0) => async (dispatch) => {
     try {
 
         dispatch({ type: ALL_PRODUCTS_REQUEST })
@@ -45,11 +46,12 @@ export const getProducts = (keyword = '', currentPage = 1, price, category, rati
                     &price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`
         }
 
-        const { data } = await axios.get(link);
+        // const { data } = await axios.get(link);
+        const { data } = await axios.get('/api/v1/products');
 
         dispatch({
             type: ALL_PRODUCTS_SUCCESS,
-            payload: data.products
+            payload: data
         })
 
     } catch (error) {
@@ -60,6 +62,7 @@ export const getProducts = (keyword = '', currentPage = 1, price, category, rati
     }
 }
 
+// Create new product
 export const newProduct = (productData) => async (dispatch) => {
     try {
 
@@ -134,6 +137,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     }
 }
 
+// Retrieves data of a product using it's ID
 export const getProductDetails = (id) => async (dispatch) => {
     try {
 
@@ -154,6 +158,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     }
 }
 
+// Create a review for a product.
 export const newReview = (reviewData) => async (dispatch) => {
     try {
 
