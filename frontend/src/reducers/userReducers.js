@@ -46,6 +46,10 @@ export const userReducer = (state = { user: {} }, action) => {
 
         case LOGIN_REQUEST:
         case REGISTER_USER_REQUEST:
+            return{
+                loading: true,
+                isAuthenticated: false
+            }
         case LOAD_USER_REQUEST:
             return {
                 loading: true,
@@ -61,7 +65,6 @@ export const userReducer = (state = { user: {} }, action) => {
                 isAuthenticated: true,
                 user: action.payload
             }
-
 
         case LOGOUT_SUCCESS:
             return {

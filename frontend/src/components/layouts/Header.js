@@ -14,7 +14,7 @@ const Header = () => {
     const alert = useAlert();
     const dispatch = useDispatch();
 
-    const { user, loading } = useSelector(state => state.user)
+    const { user } = useSelector(state => state.user)
     const { cartItems } = useSelector(state => state.cart)
 
     const logoutHandler = () => {
@@ -28,7 +28,7 @@ const Header = () => {
                 <div className="col-12 col-md-3">
                     <div className="navbar-brand">
                         <Link to="/">
-                            <img src="/images/logo.png" alt="Logo of StockX" onClick={logoutHandler}/>
+                            <img src="/images/logo.png" alt="Logo of StockX" />
                         </Link>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ const Header = () => {
                             </div>
                         </div>
                     ) : 
-                    //!loading && 
+                    // !loading && 
                     <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>}
                 </div>
             </nav>

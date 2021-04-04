@@ -107,10 +107,10 @@ function App() {
         <ProtectedRoute path="/admin/user/:id" isAdmin={true} component={UpdateUser} exact />
         <ProtectedRoute path="/admin/reviews" isAdmin={true} component={ProductReviews} exact />
 
-        {/* {!loading && user.role !== 'admin' && (
+        {!loading && user.role !== 'admin' && (
           <Footer />
-        )} */}
-        <Footer />
+        )}
+        {/* <Footer /> */}
       </div>
     </Router>
   );

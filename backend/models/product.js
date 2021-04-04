@@ -17,7 +17,8 @@ const productSchema = new mongoose.Schema({
         required: [true, 'Please enter product description']
     },
     ratings: {
-        type: Number
+        type: Number,
+        default: 0
     },
     images: [
         {
@@ -44,7 +45,7 @@ const productSchema = new mongoose.Schema({
                 'Food',
                 'Books'
             ],
-            message: 'Please select proper category for product '
+            message: 'Please select proper category for product'
         }
     },
     seller: {

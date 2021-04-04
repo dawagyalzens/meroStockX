@@ -46,8 +46,8 @@ export const getProducts = (keyword = '', currentPage = 1, price=0, category='Sn
                     &price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`
         }
 
-        // const { data } = await axios.get(link);
-        const { data } = await axios.get('/api/v1/products');
+        const { data } = await axios.get(link);
+        //const { data } = await axios.get('/api/v1/products');
 
         dispatch({
             type: ALL_PRODUCTS_SUCCESS,
