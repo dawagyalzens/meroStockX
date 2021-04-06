@@ -44,9 +44,10 @@ const Header = () => {
                     </Link>
 
                     {user ? (
+                        <Fragment>
                         <div className="ml-4 dropdown d-inline">
                             <Link to="#" className="btn dropdown-toggle text-white mr-4" 
-                            type="button" id="dropdownMenuButton1" data-toggle="dropdown"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
 
                                 <figure className="avatar avatar-nav">
@@ -72,6 +73,7 @@ const Header = () => {
                                 </Link>
                             </div>
                         </div>
+                        </Fragment>
                     ) : 
                     // !loading && 
                     <Link to="/login" className="btn ml-4" id="login_btn">Login</Link>}

@@ -13,20 +13,20 @@ const NewProduct = ({ history }) => {
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
-    const [category, setCategory] = useState('');
+    const [brand, setBrand] = useState('');
     const [stock, setStock] = useState(0);
     const [seller, setSeller] = useState('');
     const [images, setImages] = useState([]);
     const [imagesPreview, setImagesPreview] = useState([]);
 
-    const categories = [
-        'Electronics',
-        'Camera',
-        'Laptop',
-        'Sneakers',
-        'Headphones',
-        'Food',
-        'Books'
+    const brands = [
+        'Nike',
+        'Puma',
+        'Reebok',
+        'Adidas',
+        'Converse',
+        'New Balance',
+        'Vans'
     ]
 
     const alert = useAlert();
@@ -54,7 +54,7 @@ const NewProduct = ({ history }) => {
         formData.set('name', name);
         formData.set('price', price);
         formData.set('description', description);
-        formData.set('category', category);
+        formData.set('brand', brand);
         formData.set('stock', stock);
         formData.set('seller', seller);
 
@@ -136,11 +136,11 @@ const NewProduct = ({ history }) => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="category_field">Category</label>
-                                    <select className="form-control" id="category_field"
-                                    value={category} onChange={(e) => setCategory(e.target.value)}>
-                                        {categories.map(category =>(
-                                            <option key={category} value={category}>{category}</option> 
+                                    <label htmlFor="brand_field">Brand</label>
+                                    <select className="form-control" id="brand_field"
+                                    value={brand} onChange={(e) => setBrand(e.target.value)}>
+                                        {brands.map(brand =>(
+                                            <option key={brand} value={brand}>{brand}</option> 
                                         ))}
                                    </select>
                                 </div>

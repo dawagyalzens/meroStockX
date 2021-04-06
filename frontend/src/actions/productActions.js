@@ -33,7 +33,7 @@ import {
 } from '../constants/productConstants'
 
 // Retrieve all products
-export const getProducts = (keyword = '', currentPage = 1, price=0, category='Sneakers', rating = 0) => async (dispatch) => {
+export const getProducts = (keyword = '', currentPage = 1, price=0, brand='Nike', rating = 0) => async (dispatch) => {
     try {
 
         dispatch({ type: ALL_PRODUCTS_REQUEST })
@@ -41,9 +41,9 @@ export const getProducts = (keyword = '', currentPage = 1, price=0, category='Sn
         let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}
                     &price[lte]=${price[1]}&price[gte]=${price[0]}&ratings[gte]=${rating}`
 
-        if(category) {
+        if(brand) {
             link = `/api/v1/products?keyword=${keyword}&page=${currentPage}
-                    &price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}&ratings[gte]=${rating}`
+                    &price[lte]=${price[1]}&price[gte]=${price[0]}&brand=${brand}&ratings[gte]=${rating}`
         }
 
         const { data } = await axios.get(link);

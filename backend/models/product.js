@@ -32,20 +32,20 @@ const productSchema = new mongoose.Schema({
             }
         }
     ],
-    category: {
+    brand: {
         type: String,
-        required: [true, 'Please select a category for this product'],
+        required: [true, 'Please select a brand for this product'],
         enum: {
             values: [
-                'Electronics',
-                'Camera',
-                'Laptop',
-                'Sneakers',
-                'Headphones',
-                'Food',
-                'Books'
+                'Nike',
+                'Puma',
+                'Reebok',
+                'Adidas',
+                'Converse',
+                'New Balance',
+                'Vans'
             ],
-            message: 'Please select proper category for product'
+            message: 'Please select proper brand for product'
         }
     },
     seller: {

@@ -19,17 +19,17 @@ const Home = ({ match }) => {
 
     const [currentPage, setCurrentPage] = useState(1)
     const [price, setPrice] = useState([1, 1000])
-    const [category, setCategory] = useState('')
+    const [brand, setBrand] = useState('')
     const [rating, setRating] = useState(0)
 
-    const categories = [
-        'Electronics',
-        'Camera',
-        'Laptop',
-        'Sneakers',
-        'Headphones',
-        'Food',
-        'Books'
+    const brands = [
+        'Nike',
+        'Puma',
+        'Reebok',
+        'Adidas',
+        'Converse',
+        'New Balance',
+        'Vans'
     ]
 
     const alert = useAlert();
@@ -44,9 +44,9 @@ const Home = ({ match }) => {
             return alert.error(error);
         }
 
-        dispatch(getProducts(keyword, currentPage, price, category, rating));
+        dispatch(getProducts(keyword, currentPage, price, brand, rating));
 
-    }, [dispatch, alert, error,  keyword, currentPage, price, category, rating])
+    }, [dispatch, alert, error,  keyword, currentPage, price, brand, rating])
 
     function setCurrentPageNo(pageNumber) {
         setCurrentPage(pageNumber);
@@ -92,19 +92,19 @@ const Home = ({ match }) => {
 
                                             <div className="mt-5">
                                                 <h4 className="mb-3">
-                                                    Categories
+                                                    Brands
                                                 </h4>
 
                                                 <ul className="pl-0">
-                                                    {categories.map(category =>(
+                                                    {brands.map(brand =>(
                                                         <li
                                                             style={{cursor: 'pointer',
                                                             listStyleType: 'none'
                                                         }}
-                                                        key={category}
-                                                        onClick={() => setCategory(category)}
+                                                        key={brand}
+                                                        onClick={() => setBrand(brand)}
                                                         >
-                                                            {category}
+                                                            {brand}
                                                         </li>
                                                     ))}
                                                 </ul>
