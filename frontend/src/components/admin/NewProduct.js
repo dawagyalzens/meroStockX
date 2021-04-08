@@ -59,10 +59,10 @@ const NewProduct = ({ history }) => {
         formData.set('seller', seller);
 
         images.forEach(image => {
-            formData.append('images', image)
+            formData.append('images', image[0]);
         })
 
-        dispatch(newProduct(formData))
+        dispatch(newProduct(formData));
     }
 
     const onChange = e => {
@@ -198,7 +198,6 @@ const NewProduct = ({ history }) => {
                                 >
                                     CREATE
                                 </button>
-
                             </form>
                         </div>
                     </Fragment>

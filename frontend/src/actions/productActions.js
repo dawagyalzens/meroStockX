@@ -33,7 +33,7 @@ import {
 } from '../constants/productConstants'
 
 // Retrieve all products
-export const getProducts = (keyword = '', currentPage = 1, price=0, brand='Nike', rating = 0) => async (dispatch) => {
+export const getProducts = (keyword = '', currentPage, price, brand='Adidas', rating) => async (dispatch) => {
     try {
 
         dispatch({ type: ALL_PRODUCTS_REQUEST })
@@ -74,7 +74,7 @@ export const newProduct = (productData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post(`/api/v1/admin/product/new`, productData, config);
+        const { data } = await axios.post('/api/v1/admin/product/new', productData, config);
 
         dispatch({
             type: NEW_PRODUCT_SUCCESS,

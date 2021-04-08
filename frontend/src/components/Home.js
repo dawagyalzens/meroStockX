@@ -71,6 +71,9 @@ const Home = ({ match }) => {
                                 <Fragment>
                                     <div className="col-6 col-md-3 mt-5 mb-5">
                                         <div className="px-5">
+                                                <h4 className="mb-3 mb-5">
+                                                    Price Range
+                                                </h4>
                                             <Range
                                                 marks={{
                                                     1: `$1`,
@@ -144,14 +147,14 @@ const Home = ({ match }) => {
                                     <div className="col-6 col-md-9">
                                         
                                         {products && products.map(product => (
-                                        <Product key={product._id} product={product} col={4}/>
+                                        <Product key={product._id} product={product} col={5}/>
                                         ))}
                                        
                                     </div>
                                 </Fragment>
                             ) : (
                                 products && products.map(product => (
-                                <Product key={product._id} product={product} col={3} />
+                                <Product key={product._id} product={product} col={4} />
                             ))
                             )}
                         </div>

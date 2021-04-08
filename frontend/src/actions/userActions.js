@@ -229,7 +229,7 @@ export const logout = () => async (dispatch) => {
         await axios.get('/api/v1/logout')
 
         dispatch({
-            type: LOGOUT_SUCCESS
+            type: LOGOUT_SUCCESS,
         })
 
     } catch (error) {

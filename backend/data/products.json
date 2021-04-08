@@ -1,22 +1,18 @@
 [
     {
-        "name" : "Nike Dunk High Syracuse",
-        "price" : 110,
-        "description" : "Nike continues to revive their famed Be True To Your School pack with the retro release of the Nike Dunk High Syracuse.",
-        "rating" : 9,
+        "name" : "Puma RS-X Softcase Triple Black",
+        "price" : 145,
+        "description" : "STYLE 369666-02 COLORWAY BLACK/BLACK/BLACK RETAIL PRICE $110 RELEASE DATE 06/25/2019",
+        "rating" : 7,
         "images" : [{
             "public_id" : "tzfsnrli3szrdnbjgge",
-            "url" : "https://images.stockx.com/images/Nike-Dunk-High-Syracuse-2021.png?fit=clip&bg=FFFFFF&h=500&auto=compress&q=90&dpr=2&trim=color&updated_at=1610190459&fm=webp&ixlib=react-9.0.3&w=1246"
+            "url" : "https://images.stockx.com/images/Puma-RS-Softcase-Triple-Black.jpg?fit=clip&bg=FFFFFF&h=500&auto=compress&q=90&dpr=2&trim=color&updated_at=1607052405&fm=webp&ixlib=react-9.0.3&w=1246"
         }],
-        "brand": "Nike",
-        "seller" : "Nike",
+        "brand": "Puma",
+        "seller" : "StockX",
         "stock" : 7,
-        "numOfReviews" : 11,
-        "reviews" : [{
-            "name" : "Dawa Gyalzen Sherpa",
-            "rating" : 9,
-            "comment" : "I love these sneakers."
-        }],
-        "createdAt" : "Jul 12 2011"
+        "numOfReviews" : 0,
+        "reviews" : [],
+        "createdAt" : "Apr 06 2021"
     }
 ]

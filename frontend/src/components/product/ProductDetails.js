@@ -172,7 +172,7 @@ const ProductDetails = ({ match }) => {
                 <p id="product_seller mb-3">Sold by: <strong>{product.seller}</strong></p>
 
                 {user ? 
-				    <button id="review_btn" type="button" className="btn btn-primary mt-4" data-toggle="modal" data-target="ratingModal"
+				    <button id="review_btn" type="button" className="btn btn-primary mt-4" data-toggle="modal" data-target="#ratingModal"
                     onClick={setUserRatings}>
                     Submit Your Review
                     </button>

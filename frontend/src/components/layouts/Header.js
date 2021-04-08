@@ -60,7 +60,7 @@ const Header = () => {
                                 <span>{user && user.name}</span>
                             </Link>
 
-                            <div className="dropdownmenu" aria-labelledby="dropdownMenuButton" >
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" >
 
                                 {user && user.role === 'admin' && (
                                     <Link className="dropdown-item" to="/dashboard">Dashboard</Link>            
