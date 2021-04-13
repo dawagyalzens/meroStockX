@@ -17,7 +17,7 @@ const UsersList = ({ history }) => {
     const dispatch = useDispatch();
 
     const { loading, error, users } = useSelector(state => state.allUsers);
-    const { isDeleted } = useSelector(state => state.user);
+    const { isDeleted } = useSelector(state => state.userProfile);
 
     useEffect(() => {
         dispatch(allUsers());

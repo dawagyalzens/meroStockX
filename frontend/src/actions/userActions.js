@@ -140,7 +140,6 @@ export const updateProfile = (userData) => async (dispatch) => {
     }
 }
 
-
 // Update Password
 export const updatePassword = (passwords) => async (dispatch) => {
     try {
@@ -229,7 +228,7 @@ export const logout = () => async (dispatch) => {
         await axios.get('/api/v1/logout')
 
         dispatch({
-            type: LOGOUT_SUCCESS,
+            type: LOGOUT_SUCCESS
         })
 
     } catch (error) {
@@ -319,7 +318,7 @@ export const deleteUser = (id) => async (dispatch) => {
 
         dispatch({
             type: DELETE_USER_SUCCESS,
-            payload: data.success
+            payload: data
         })
 
     } catch (error) {

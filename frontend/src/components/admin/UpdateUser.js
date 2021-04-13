@@ -17,7 +17,7 @@ const UpdateUser = ({ history, match }) => {
     const alert = useAlert();
     const dispatch = useDispatch();
 
-    const { error, isUpdated } = useSelector(state => state.user);
+    const { error, isUpdated } = useSelector(state => state.userProfile);
     const { user } = useSelector(state => state.userDetails);
 
     const userId = match.params.id;
